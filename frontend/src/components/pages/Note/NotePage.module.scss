@@ -1,0 +1,23 @@
+.notesPage {
+  display: flex;
+  flex-direction: column;
+}
+
+.backButton {
+  align-self: flex-start;
+  font-size: 24px;
+  text-decoration: none;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}

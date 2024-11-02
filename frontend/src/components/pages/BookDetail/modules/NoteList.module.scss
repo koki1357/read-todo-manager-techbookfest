@@ -1,0 +1,29 @@
+.noteList {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.noteItem {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.editInput {
+  width: 70%;
+  margin-right: 10px;
+}
+
+.editButton,
+.updateButton,
+.cancelButton,
+.deleteButton {
+  margin-left: 10px;
+  padding: 5px 10px;
+  font-size: 12px;
+  cursor: pointer;
+}

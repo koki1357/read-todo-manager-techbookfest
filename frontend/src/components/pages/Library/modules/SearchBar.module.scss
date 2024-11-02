@@ -1,0 +1,25 @@
+// components/SearchBar.module.scss
+.searchBar {
+  display: flex;
+  margin-bottom: 16px;
+
+  .input {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+  }
+
+  .searchButton {
+    padding: 8px 12px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken(#f0f0f0, 5%);
+    }
+  }
+}

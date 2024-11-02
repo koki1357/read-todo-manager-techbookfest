@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  db:
+    build: ./
+    container_name: mysqlapp
+    environment:
+      MYSQL_ROOT_PASSWORD: tsundoku01
+      MYSQL_DATABASE: tsundoku_db
+    ports:
+      - '3306:3306'
+    volumes:
+      - ./initdb.d:/docker-entrypoint-initdb.d
+      - ./db-volume:/var/lib/mysql

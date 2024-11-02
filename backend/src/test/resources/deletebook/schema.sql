@@ -1,0 +1,14 @@
+DROP TABLE IF EXISTS books;
+
+CREATE TABLE IF NOT EXISTS books (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id VARCHAR(50) NOT NULL,
+    title VARCHAR(255) NOT NULL,
+    image TEXT,
+    author VARCHAR(100),
+    start_date DATE,
+    finish_date DATE,
+    days_per_week VARCHAR(5),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);

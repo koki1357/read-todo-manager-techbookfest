@@ -1,0 +1,42 @@
+/* BookDetails.module.css */
+.details {
+  border-top: 1px solid #e0e0e0;
+  padding-top: 16px;
+}
+
+.sectionTitle {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.detailsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.detailItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.detailLabel {
+  font-weight: bold;
+  margin-left: 8px;
+  width: 120px;
+}
+
+.detailValue {
+  color: #666;
+}
+
+.addNoteButton {
+  margin-left: auto;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+}

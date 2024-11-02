@@ -1,0 +1,28 @@
+// components/BookItem.module.scss
+.bookItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer; // ホバー時に選択カーソルに変更
+  transition: background-color 0.3s; // 背景色のトランジションを追加
+  border: 1px solid #333;
+  padding: 10px;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1); // ホバー時に背景色を少し暗くする
+  }
+
+  .image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+
+  .title {
+    margin-top: 8px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+  }
+}

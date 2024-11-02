@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.readtodomanager.mapper.BookMapper"> 
+    <resultMap id="BookResultMap" type="com.example.readtodomanager.model.Book">
+        <id property="id" column="id"/>
+        <result property="userId" column="user_id"/>
+        <result property="title" column="title"/>
+        <result property="image" column="image"/>
+        <result property="author" column="author"/>
+        <result property="startDate" column="start_date"/>
+        <result property="finishDate" column="finish_date"/>
+        <result property="daysPerWeek" column="days_per_week"/>
+    </resultMap>
+    <select id="findByUserId" resultMap="BookResultMap" parameterType="String">
+        SELECT * FROM Books where user_id = #{userId}
+    </select>
+    <select id="updateBooks" parameterType="String" resultMap="BookResultMap">
+        UPDATE Books
+        SET title = #{title},
+            image = #{image},
+            author = #{author},
+            start_date = #{startDate},
+            finish_date = #{finishDate},
+            days_per_week = #{daysPerWeek},
+            memo = #{memo}
+        WHERE id = #{id}
+    </select>
+    <select id="searchBooks" parameterType="map" resultMap="BookResultMap">
+        SELECT id, title, image FROM Books 
+        WHERE title LIKE CONCAT('%', #{title}, '%')
+        AND user_id = #{userId}
+    </select>
+    <select id="getBookDetails" parameterType="long" resultMap="BookResultMap">
+        SELECT id, title, image, author, start_date, finish_date, days_per_week FROM Books 
+        WHERE id = #{id}
+    </select>
+    <select id="findById" resultMap="BookResultMap">
+        SELECT * FROM Books WHERE id = #{id}
+    </select>
+    <delete id="delete">
+        DELETE FROM Books WHERE id = #{id}
+    </delete>
+    <insert id="register" parameterType="com.example.readtodomanager.model.Book">
+        INSERT INTO Books (user_id, title, image, author, start_date, finish_date)
+        VALUES (#{userId}, #{title}, #{image}, #{author}, #{startDate}, #{finishDate})
+    </insert>
+</mapper>
